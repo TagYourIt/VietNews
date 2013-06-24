@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="wpapp_recent">Berita Terbaru</string>
+    <string name="wpapp_categories">Kategori</string>
+    <string name="wpapp_pages">Halaman</string>
+    <string name="wpapp_twitter">Twitter</string>
+    <string name="wpapp_about">Info</string>
+
+    <string name="recent_news">Berita Terbaru</string>
+
+    <string name="categ_categories">Kategori</string>
+
+    <string name="about">Info</string>
+    <string name="about_reset_data">Hapus Data</string>
+    <string name="about_alert">Anda ingin menghapus data?</string>
+    <string name="about_yes">Ya</string>
+    <string name="about_no">Tidak</string>
+    <string name="about_contact_webmaster">Kontak Webmaster</string>
+    <string name="about_tell_a_friend">Beritahu Teman</string>
+    <string name="about_visit_website">Kunjungi Website</string>
+    <string name="about_terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="about_privacy_policy">Privacy Policy</string>
+    
+    <string name="share">Berbagi</string>
+    <string name="share_this_on">Berbagi melalui...</string>
+    <string name="share_email">Email</string>
+    <string name="share_cancel">Batal</string>
+
+    <string name="post_source">Sumber</string>
+
+    <string name="indicator_loading">Sedang mengunduh...</string>
+
+    <string name="ptr_pull_to_reload">Tarik untuk perbarui berita</string>
+    <string name="ptr_last_updated">Terakhir diperbarui: </string>
+    <string name="ptr_pull_down_to_refresh">Tarik ke bawah untuk perbarui berita...</string>
+    <string name="ptr_release_to_refresh">Lepaskan untuk perbarui berita...</string>
+    <string name="ptr_reloading">Sedang memperbarui berita...</string>
+
+    <string name="webmaster_subject">Saran untuk Iphone app</string>
+    <string name="webmaster_body"></string>
+    <string name="tell_friend_subject">Iphone app menarik</string>
+    <string name="tell_friend_body">Saya ingin berbagi sebuah iphone app yang menarik.</string>
+
+    <string name="twitter">Twitter Posts</string>
+    <string name="pages">Halaman</string>
+    <string name="pages_available">Halaman yang tersedia</string>
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="acs-oauth-secret-development" type="string">h67EgXziM5ariEcoZESqcW6oiisWmHrS</property>
+    <property name="acs-oauth-key-development" type="string">gl9EClmBmkNsYnwUIOci2TivAQXaI8JD</property>
+    <property name="acs-api-key-development" type="string">ON5k84r3mhT2IgNp1bZBR5cIBXYEwVbL</property>
+    <property name="acs-oauth-secret-production" type="string">5t1MyJma6JgjiOScBvVrvWheewJelNFq</property>
+    <property name="acs-oauth-key-production" type="string">a1KNAWNLWD4opVZPBM9mOzlEEu2fsQmo</property>
+    <property name="acs-api-key-production" type="string">jcNfh7rxibWChzr3H9N13fbDVujc0LMB</property>
+    <id>org.tapthatapp.viet</id>
+    <name>VietNews</name>
+    <version>2</version>
+    <publisher>MBW Networks</publisher>
+    <url>http://tapthatapp.org</url>
+    <description>VietSnips is your one source for Vietnamese News. It is the most popular way to catch up on the Vietnamese news you care about, daily.</description>
+    <copyright>2013 by MBW Networks</copyright>
+    <icon>appicon.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>d6b3743f-79c3-49f9-a659-02b1cb945a5f</guid>
+    <property name="ti.ui.defaultunit" type="string">system</property>
+    <iphone>
+        <orientations device="iphone">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+        </orientations>
+        <orientations device="ipad">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+        </orientations>
+    </iphone>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module version="1.5">ti.admob</module>
+    </modules>
+    <deployment-targets>
+        <target device="tizen">false</target>
+        <target device="blackberry">true</target>
+        <target device="android">true</target>
+        <target device="ipad">true</target>
+        <target device="iphone">true</target>
+        <target device="mobileweb">false</target>
+    </deployment-targets>
+    <sdk-version>3.1.1.GA</sdk-version>
+</ti:app>

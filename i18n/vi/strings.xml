@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="wpapp_recent">Tin Tức</string>
+    <string name="wpapp_categories">Loại</string>
+    <string name="wpapp_pages">Trang</string>
+    <string name="wpapp_twitter">Twitter</string>
+    <string name="wpapp_about">đây đó</string>
+
+    <string name="recent_news">Tin Tức</string>
+
+    <string name="categ_categories">Loại</string>
+
+    <string name="about">đây đó</string>
+    <string name="about_reset_data">Thiết lập lại dữ liệu</string>
+    <string name="about_alert">Bạn có muốn thiết lập lại dữ liệu?</string>
+    <string name="about_yes">Vâng</string>
+    <string name="about_no">Không</string>
+    <string name="about_contact_webmaster">Liên hệ</string>
+    <string name="about_tell_a_friend">Nói với một người bạn</string>
+    <string name="about_visit_website">Visit Website</string>
+    <string name="about_terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="about_privacy_policy">Privacy Policy</string>
+    
+    <string name="share">Chia</string>
+    <string name="share_this_on">Chia sẻ tin tức này...</string>
+    <string name="share_email">Email</string>
+    <string name="share_cancel">Hủy bỏ</string>
+
+    <string name="post_source">Nguồn</string>
+
+    <string name="indicator_loading">Bắt Tin tức...</string>
+
+    <string name="ptr_pull_to_reload">Kéo để tải lại...</string>
+    <string name="ptr_last_updated">Cập nhật ngày:</string>
+    <string name="ptr_pull_down_to_refresh">Kéo xuống để làm mới...</string>
+    <string name="ptr_release_to_refresh">Phát hành để làm mới...</string>
+    <string name="ptr_reloading">Tải lại...</string>
+
+    <string name="webmaster_subject">Iphone app feedback</string>
+    <string name="webmaster_body"></string>
+    <string name="tell_friend_subject">Interesting iphone app</string>
+    <string name="tell_friend_body">I'd like to share an interesting iphone app.</string>
+
+    <string name="twitter">Twitter Posts</string>
+    <string name="pages">Trang</string>
+    <string name="pages_available">Trang có sẵn</string>
+
+    <string name="youtube">Youtube</string>
+    <string name="facebook">Facebook</string>
+    <string name="flickr">Flickr</string>
+
+</resources>
