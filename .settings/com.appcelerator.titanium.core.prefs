@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+provisioning_profiles/development/0065E6AB-2607-4572-8A4A-C48F7BAC85EA/appid=org.heart.LeonTestAppThree
+provisioning_profiles/development/0065E6AB-2607-4572-8A4A-C48F7BAC85EA/name=LeonTestAppThree
+provisioning_profiles/development/0065E6AB-2607-4572-8A4A-C48F7BAC85EA/uuid=0065E6AB-2607-4572-8A4A-C48F7BAC85EA
+provisioning_profiles/development/0D15E498-DDCB-4412-A677-B494D8627263/appid=*
+provisioning_profiles/development/0D15E498-DDCB-4412-A677-B494D8627263/name=iOS Team Provisioning Profile\: *
+provisioning_profiles/development/0D15E498-DDCB-4412-A677-B494D8627263/uuid=0D15E498-DDCB-4412-A677-B494D8627263
+provisioning_profiles/development/5807F116-5C17-4BD5-B641-2CD9FA2AF245/appid=org.tapthatapp.vietnews
+provisioning_profiles/development/5807F116-5C17-4BD5-B641-2CD9FA2AF245/name=Vietnews_Profile
+provisioning_profiles/development/5807F116-5C17-4BD5-B641-2CD9FA2AF245/uuid=5807F116-5C17-4BD5-B641-2CD9FA2AF245
+provisioning_profiles/development/8855E279-87C1-48A7-9CFC-3ED895549949/appid=*
+provisioning_profiles/development/8855E279-87C1-48A7-9CFC-3ED895549949/name=iOS Team Provisioning Profile\: *
+provisioning_profiles/development/8855E279-87C1-48A7-9CFC-3ED895549949/uuid=8855E279-87C1-48A7-9CFC-3ED895549949
+provisioning_profiles/distribution/739C145D-7F86-40E1-BC27-6BCEE1869A6C/appid=org.tapthatapp.vietnews
+provisioning_profiles/distribution/739C145D-7F86-40E1-BC27-6BCEE1869A6C/name=VietNews_Distr_Profile
+provisioning_profiles/distribution/739C145D-7F86-40E1-BC27-6BCEE1869A6C/uuid=739C145D-7F86-40E1-BC27-6BCEE1869A6C
