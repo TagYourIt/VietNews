@@ -6,9 +6,9 @@
     <property name="acs-oauth-secret-production" type="string">5t1MyJma6JgjiOScBvVrvWheewJelNFq</property>
     <property name="acs-oauth-key-production" type="string">a1KNAWNLWD4opVZPBM9mOzlEEu2fsQmo</property>
     <property name="acs-api-key-production" type="string">jcNfh7rxibWChzr3H9N13fbDVujc0LMB</property>
-    <id>org.tapthatapp.viet</id>
+    <id>org.tapthatapp.vietnews</id>
     <name>VietNews</name>
-    <version>2</version>
+    <version>1</version>
     <publisher>MBW Networks</publisher>
     <url>http://tapthatapp.org</url>
     <description>VietSnips is your one source for Vietnamese News. It is the most popular way to catch up on the Vietnamese news you care about, daily.</description>
@@ -34,7 +34,9 @@
             <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
         </orientations>
     </iphone>
-    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest android:versionCode="1" android:versionName="1"/>
+    </android>
     <mobileweb>
         <precache/>
         <splash>

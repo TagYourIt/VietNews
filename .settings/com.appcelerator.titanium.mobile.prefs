@@ -1,0 +1,9 @@
+android/ATTR_PROJECT_NAME=VietNews
+android/abi=x86
+android/distribute_path=/Users/void/Documents/Titanium_Studio_Workspace/VietNews/build/android
+android/keystore_alias=Leon
+android/keystore_password=heart123
+android/keystore_path=/Users/void/Documents/Titanium_Studio_Workspace/VietNews/androidKey/leon_Android_Keystore
+android/recent_output=/Users/void/Documents/Titanium_Studio_Workspace/VietNews/build/android
+android/sdk_version=Android 2.3.3
+eclipse.preferences.version=1
