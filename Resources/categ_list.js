@@ -7,35 +7,35 @@ var categ_list = {
             "icon_on" : "imgs/categ/culture.png"
         },
         {
-            "slug"    : "gioi",
+            "slug"    : "tech",
             "label"   : "Thế giới", //world
             "icon_off": "imgs/categ/world.png",
             "icon_on" : "imgs/categ/world.png"
         },
         {
-            "slug"    : "doanh",
+            "slug"    : "business",
             "label"   : "Kinh doanh", //Business
             "icon_off": "imgs/categ/business.png",
             "icon_on" : "imgs/categ/business.png"
         },
         {
-            "slug"    : "giaitri", //entertainment
+            "slug"    : "entertainment", //entertainment
             "label"   : "Giải trí",
             "icon_off": "imgs/categ/ent.png",
             "icon_on" : "imgs/categ/ent.png"
         },
         {
-            "slug"    : "thethao", //sports
+            "slug"    : "sports", //sports
             "label"   : "Thể thao",
             "icon_off": "imgs/categ/sports.png",
             "icon_on" : "imgs/categ/sports.png"
         },
-        {
-            "slug"    : "tech", // Technology
-            "label"   : "Công Nghệ",
-            "icon_off": "imgs/categ/tech.png",
-            "icon_on" : "imgs/categ/tech.png"
-        },
+         {
+             "slug"    : "tech", // Technology
+             "label"   : "Công Nghệ",
+             "icon_off": "imgs/categ/tech.png",
+             "icon_on" : "imgs/categ/tech.png"
+         },
         
     ]
 };
