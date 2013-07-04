@@ -45,12 +45,12 @@ var WpApp = (function() {
         rows = db.execute("SELECT POST_ID, TITLE, DESCRIPTION, CONTENT, AUTHOR, IMAGE, URL, DATE, SECTION FROM POSTS WHERE SECTION = ? ORDER BY DATE DESC", section);
 
         var dataArray = [];
-        i = 0;
+     //   i = 0;
 
         while (rows.isValidRow()) {
 
             var remote_image = get_first_image_src(rows.fieldByName('CONTENT'));
-
+			Ti.API.info("wpapp.js:53 " + remote_image);
             if (remote_image == null) {
                 remote_image = config.DEFAULT_IMAGE;
             }
@@ -81,18 +81,20 @@ var WpApp = (function() {
             p.title = rows.fieldByName('TITLE');
             p.description = rows.fieldByName('DESCRIPTION');
             p.content = rows.fieldByName('CONTENT');
-            p.meta = pretty_date + ' | ' + rows.fieldByName('AUTHOR'), p.image = remote_image, p.url = rows.fieldByName('URL');
+            p.meta = pretty_date + ' | ' + rows.fieldByName('AUTHOR');
+            p.image = remote_image;
+            p.url = rows.fieldByName('URL');
             p.date = rows.fieldByName('DATE');
             p.author = {
                 nickname: rows.fieldByName('AUTHOR')
             };
-
+			Ti.API.info("wpapp.js:89 " + p.image);
             blog_post[p.id] = p;
-
+  // i++;
             rows.next();
 
-            i++;
-        };
+         
+        }
 
         rows.close()
         db.close()
@@ -145,11 +147,11 @@ var WpApp = (function() {
 
             if (count == 0) {
                 var remote_image = get_first_image_src(p[i].content);
-
+				
                 if (remote_image == null) {
                     remote_image = config.DEFAULT_IMAGE;
                 }
-
+				Ti.API.info("wpappjs:152 " + remote_image);
                 db.execute("INSERT INTO POSTS (POST_ID, TITLE, DESCRIPTION, CONTENT, AUTHOR, IMAGE, URL, DATE, SECTION) VALUES (?,?,?,?,?,?,?,?,?)", p[i].id, valid_title, p[i].excerpt, p[i].content, p[i].author.nickname, remote_image, p[i].url, p[i].date, section);
             }
 
@@ -162,7 +164,7 @@ var WpApp = (function() {
 
     function init_db() {
         var db = Titanium.Database.open(config.DB_NAME);
-        db.execute('CREATE TABLE IF NOT EXISTS POSTS (POST_ID INTEGER, TITLE VARCHAR(255), DESCRIPTION TEXT, CONTENT TEXT, AUTHOR TEXT, IMAGE VARCHAR(255), URL VARCHAR(255), DATE VARCHAR(255), SECTION VARCHAR(255))');
+        db.execute('CREATE TABLE IF NOT EXISTS POSTS (POST_ID INTEGER, TITLE VARCHAR(255), DESCRIPTION TEXT, CONTENT TEXT, AUTHOR TEXT, IMAGE VARCHAR(1000), URL VARCHAR(255), DATE VARCHAR(255), SECTION VARCHAR(255))');
         db.execute('CREATE TABLE IF NOT EXISTS FETCH_LOG (SECTION VARCHAR(255), UPDATED_AT VARCHAR(255))');
         db.execute('CREATE TABLE IF NOT EXISTS PAGES (PAGE_ID INTEGER, TITLE VARCHAR(255), CONTENT TEXT, AUTHOR TEXT, URL VARCHAR(255), DATE VARCHAR(255), SECTION VARCHAR(255))');
         db.execute('CREATE INDEX IF NOT EXISTS POSTID ON POSTS (POST_ID)');
@@ -184,6 +186,7 @@ var WpApp = (function() {
         if (Array.isArray(matches)) {
             for (i = 0; i < matches.length; i++) {
                 matches[i] = matches[i].reverse();
+                Ti.API.info("wpapp.js:187 " + matches[i]);
             }
 
             return matches[0];

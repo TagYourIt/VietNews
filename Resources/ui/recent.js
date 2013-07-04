@@ -42,6 +42,7 @@ var winRecent = (function() {
 
     Ti.App.addEventListener(
     events.SET_BLOG_LIST_RECENT, function(e) {
+    	Ti.API.info(e.list_data);
         create_blog_list_recent(e.list_data);
     });
 
@@ -75,11 +76,11 @@ var winRecent = (function() {
 
         if (Titanium.Platform.displayCaps.platformHeight==xscreen.iphoneh) {
           max_title_length = 52;
-          title_width = Titanium.Platform.displayCaps.platform-100;
+          title_width = Ti.Platform.displayCaps.platformWidth-100;
         }
         else {
           max_title_length = 130;
-          title_width = Titanium.Platform.displayCaps.platform-100;
+          title_width = Ti.Platform.displayCaps.platformWidth-100;
         }
 
         title = wpappHtmlDecode(title);
@@ -96,7 +97,10 @@ var winRecent = (function() {
         }
         
         image = encodeURI(image);
-        
+         if (image == null) {
+                    image = config.DEFAULT_IMAGE;
+                }
+        Ti.API.info("recent.js:100 " + image);
         var row = Ti.UI.createTableViewRow({
                 className: "blog_list_rows",
                 height: 62,

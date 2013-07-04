@@ -12,7 +12,7 @@ Ti.include("pages_list.js");
 var json_url_recent = config.BLOG_URL + "?json=get_recent_posts&count=" + 
                       config.JSON_POST_COUNT + "&apikey=" + 
                       config.JSON_API_KEY;
-
+Ti.API.info(json_url_recent);
 var winCategBlogList;
 
 Ti.include(

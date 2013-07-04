@@ -46,7 +46,7 @@ var config = {
   "FORCE_RELOAD_TIME"   : "1800 seconds", // do not refresh automatically during this time
 
   // blog post tableview
-  "DEFAULT_IMAGE"       : "imgs/default.png",
+  "DEFAULT_IMAGE"       : "http://vietnews.tapthatapp.org/img/default.png",
 
   // pages tableview
   "DEFAULT_PAGES_IMAGE"  : 'imgs/179-notepad.png',

@@ -1,7 +1,7 @@
 //This is a Category List after you select a category
 
 
-var createBlogPostList = function(url, title, section) {
+var createBlogPostList = function(url, btitle, section) {
 
     var tb_height;
 
@@ -13,7 +13,7 @@ var createBlogPostList = function(url, title, section) {
 
     var Window = Ti.UI.createWindow({
             navBarHidden: false,
-            title: title,
+            title: btitle,
             barColor: skin.CATEG_BAR_COLOR,
             barImage: skin.CATEG_BAR_IMAGE,
             layout: "vertical"
@@ -64,23 +64,26 @@ var createBlogPostList = function(url, title, section) {
         WpApp.load_db(Window, section);
     });
 
-    function create_blog_list_rows(id, title, description, content, meta, image) {
+    function create_blog_list_rows(id, btitle, description, content, meta, bimage) {
 
         var max_title_length, title_width;
-
+        bimage = encodeURI(bimage);
+		if (bimage == null) {
+			bimage = config.DEFAULT_IMAGE;
+			
+			
+		}
         if (Titanium.Platform.displayCaps.platformHeight==xscreen.iphoneh) {
           max_title_length = 48;
-          title_width = Titanium.Platform.displayCaps.platform-100;
-        }
-        else {
+          title_width = Ti.Platform.displayCaps.platformWidth -100;
+        } else {
           max_title_length = 130;
-          title_width = Titanium.Platform.displayCaps.platform-100;
+          title_width = Ti.Platform.displayCaps.platformWidth - 100;
         }
+	   btitle = wpappHtmlDecode(btitle);
 
-        title = wpappHtmlDecode(title);
-
-        if (title.length > max_title_length) {
-            title = title.substring(0, max_title_length) + '...';
+        if (btitle.length > max_title_length) {
+            btitle = btitle.substring(0, max_title_length) + '...';
         }
 
         if (alt_bgcolor) {
@@ -89,7 +92,7 @@ var createBlogPostList = function(url, title, section) {
         else {
           bgcolor = skin.CATEG_TV_BGCOLOR_ALT;
         }
-
+		var topheight = 22 + 12;
         var row = Ti.UI.createTableViewRow({
                 className: "blog_list_rows",
                 height: 62,
@@ -97,7 +100,7 @@ var createBlogPostList = function(url, title, section) {
                 hasChild: false
             }),
             img = Ti.UI.createImageView({
-                image: image,
+                image: bimage,
                 height: 56,
                 left: 3,
                 width: 75,
@@ -105,10 +108,10 @@ var createBlogPostList = function(url, title, section) {
                 preventDefaultImage: false,
                 defaultImage: config.DEFAULT_IMAGE
             }),
-            title = Ti.UI.createLabel({
-                text: title,
+            vbtitle = Ti.UI.createLabel({
+                text: btitle,
                 width: title_width,
-                height: 'auto',
+                height: 16,
                 left: 82,
                 top: 4,
                 color: skin.CATEG_TV_TITLE_COLOR,
@@ -122,7 +125,7 @@ var createBlogPostList = function(url, title, section) {
                 width: 210,
                 height: 30,
                 left: 82,
-                top: 22 + 12,
+                top: topheight,
                 color: skin.CATEG_TV_META_COLOR,
                 font: {
                     fontSize: 12
@@ -137,8 +140,10 @@ var createBlogPostList = function(url, title, section) {
             row.backgroundGradient = skin.CATEG_TV_GRADIENT;
         }
 
+
+
         row.add(img);
-        row.add(title);
+        row.add(vbtitle);
         row.add(body);
 
         row.addEventListener("click", function(e) {
@@ -161,20 +166,20 @@ var createBlogPostList = function(url, title, section) {
         return row;
     }
 
-    function create_blog_list(list) {
+    function create_blog_list(blist) {
         var rows = [];
 
-        for (var i = 0, l = list.length; i < l; i++) {
+        for (var i = 0, l = blist.length; i < l; i++) {
             alt_bgcolor = i % 2;
             rows.push(
             create_blog_list_rows(
-            list[i].id, list[i].title, list[i].description, list[i].content, list[i].meta, list[i].image, alt_bgcolor));
+            blist[i].id, blist[i].title, blist[i].description, blist[i].content, blist[i].meta, blist[i].image, alt_bgcolor));
         }
         viewBlogList.setData(rows);
     }
 
-    function add_new_blog_list(list) {
-        create_blog_list(list);
+    function add_new_blog_list(blist) {
+        create_blog_list(blist);
 
         // reserved for appendRow / insertRowBefore
         load_indicator_stop(Window);
