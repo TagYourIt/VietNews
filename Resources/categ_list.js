@@ -7,7 +7,7 @@ var categ_list = {
             "icon_on" : "imgs/categ/culture.png"
         },
         {
-            "slug"    : "tech",
+            "slug"    : "world",
             "label"   : "Thế giới", //world
             "icon_off": "imgs/categ/world.png",
             "icon_on" : "imgs/categ/world.png"

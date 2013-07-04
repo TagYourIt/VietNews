@@ -30,9 +30,9 @@ Ti.include(
     "ui/about.js",
     "ui/post.js",  
     "ui/webview.js",
-    //"ui/twitter.js",
-    //"ui/page.js",
-    //"ui/page_detail.js",
+    "ui/twitter.js",
+    "ui/page.js",
+    "ui/page_detail.js",
     "ui/wpapp.js"
 );
 
