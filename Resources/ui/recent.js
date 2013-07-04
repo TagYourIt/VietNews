@@ -42,7 +42,7 @@ var winRecent = (function() {
 
     Ti.App.addEventListener(
     events.SET_BLOG_LIST_RECENT, function(e) {
-    	Ti.API.info(e.list_data);
+    	//Ti.API.info(e.list_data);
         create_blog_list_recent(e.list_data);
     });
 
@@ -100,7 +100,7 @@ var winRecent = (function() {
          if (image == null) {
                     image = config.DEFAULT_IMAGE;
                 }
-        Ti.API.info("recent.js:100 " + image);
+       // Ti.API.info("recent.js:100 " + image);
         var row = Ti.UI.createTableViewRow({
                 className: "blog_list_rows",
                 height: 62,

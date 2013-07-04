@@ -50,7 +50,7 @@ var WpApp = (function() {
         while (rows.isValidRow()) {
 
             var remote_image = get_first_image_src(rows.fieldByName('CONTENT'));
-			Ti.API.info("wpapp.js:53 " + remote_image);
+			//Ti.API.info("wpapp.js:53 " + remote_image);
             if (remote_image == null) {
                 remote_image = config.DEFAULT_IMAGE;
             }
@@ -88,9 +88,9 @@ var WpApp = (function() {
             p.author = {
                 nickname: rows.fieldByName('AUTHOR')
             };
-			Ti.API.info("wpapp.js:89 " + p.image);
+			//Ti.API.info("wpapp.js:89 " + p.image);
             blog_post[p.id] = p;
-  // i++;
+   i++;
             rows.next();
 
          
@@ -151,7 +151,7 @@ var WpApp = (function() {
                 if (remote_image == null) {
                     remote_image = config.DEFAULT_IMAGE;
                 }
-				Ti.API.info("wpappjs:152 " + remote_image);
+				//Ti.API.info("wpappjs:152 " + remote_image);
                 db.execute("INSERT INTO POSTS (POST_ID, TITLE, DESCRIPTION, CONTENT, AUTHOR, IMAGE, URL, DATE, SECTION) VALUES (?,?,?,?,?,?,?,?,?)", p[i].id, valid_title, p[i].excerpt, p[i].content, p[i].author.nickname, remote_image, p[i].url, p[i].date, section);
             }
 
@@ -186,7 +186,7 @@ var WpApp = (function() {
         if (Array.isArray(matches)) {
             for (i = 0; i < matches.length; i++) {
                 matches[i] = matches[i].reverse();
-                Ti.API.info("wpapp.js:187 " + matches[i]);
+                //Ti.API.info("wpapp.js:187 " + matches[i]);
             }
 
             return matches[0];
